@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+    background-image: url(img/giraffepattern.png)
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("img/giraffe3.jpg");
+    min-height: 80%;
+    clip-path: polygon(0 0, 0 100%, 100% 80%, 100% 0);
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+.yt {
+  position: relative;
+}
+.yt:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 56.25%;
+}
+.yt > .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+</style>
+    
+<style>
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+} 
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+</style>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">ŻYRAFKI SZATERA</a>
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">O ŻYRAFKACH</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fas fa-users"></i> DRUŻYNA</a>
+      <a href="#video" class="w3-bar-item w3-button"><i class="fas fa-video"></i> FILMY</a>
+    </div>
+
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16 ">ZAMKNIJ</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">O ŻYRAFKACH</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">DRUŻYNA</a>
+  <a href="#video" onclick="w3_close()" class="w3-bar-item w3-button">FILMY</a>
+</nav>
+
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Żyrafki Szatera</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Żyrafki Szatera</span><br>
+    <span class="w3-large">Społeczność, napierdalanie w gry, cokolwiek</span>
+  </div>
+</header>
+
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">O ŻYRAFKACH</h3>
+  <p class="w3-center w3-large">Tutaj jest opis</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-third">
+      <i class="fas fa-gamepad w3-margin-bottom w3-jumbo w3-center" style="color: #555;"></i>
+      <p class="w3-large">Napierdalamy w gry</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-third">
+      <i class="fas fa-heart w3-margin-bottom w3-jumbo" style="color: red"></i>
+      <p class="w3-large">Pasja</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-third">
+      <i class="fas fa-gem w3-margin-bottom w3-jumbo" style="color: #79c7c9"></i>
+      <p class="w3-large">Quality content</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-light-grey" style="padding:128px 16px; clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 91%);">
+  <div class="w3-row-padding" style="position: relative;">
+    <div class="w3-col m4" style="height: 100%;">
+      <h3>Najnowsze Żryafkowe akcje.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fas fa-video"></i> Więcej filmów</a></p>
+    </div>
+    <div class="w3-col m8">
+      <div class='embed-container'><iframe src='https://www.youtube.com/embed/nJFtAao04Uc?rel=0' frameborder='0' allowfullscreen></iframe></div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">DRUŻYNA</h3>
+  <p class="w3-center w3-large">Tutaj jest opis</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card w3-text-white" style="background-image: url(img/riven2.jpg); background-size: cover; background-position: 80% 50%;">
+        <div class="w3-container" style="position: relative; width: 100%;">
+            <div class="w3-card-4" style="width: 160px; height: 160px; padding: 5px; border-radius: 50%; background-color: #ffd700; margin: auto; margin-top: 16px; ">
+        <img src="img/Mark_of_the_Star_Guardian.png" style="width:150px; margin: auto; display: block; border-radius: 50%;" class="w3-card-4">
+            </div>
+          <h3 class="w3-center">Shàtter Me</h3>
+          <p class="w3-center w3-text-light-grey">Maciek Tutlewski</p>
+            <hr>
+          <p>Main: Riven</p>
+            <hr>
+          <p>Główna linia: Dżungla</p>
+          <p><a href="http://eune.op.gg/summoner/userName=sh%C3%A0tterme" target="_blank" class="w3-button w3-light-grey w3-block"><i class="fas fa-chart-bar"></i> PROFIL OP.GG</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card w3-text-white" style="background-image: url(img/yasuo2.jpg); background-size: cover; background-position: 80% 50%;">
+        <div class="w3-container">
+            <div class="w3-card-4" style="width: 160px; height: 160px; padding: 5px; border-radius: 50%; background-color: #79c7c9; margin: auto; margin-top: 16px; ">
+        <img src="img/Multi.png" style="width:150px; margin: auto; display: block; border-radius: 50%;" class="w3-card-4">
+            </div>
+          <h3 class="w3-center">Longest Yeah Boy</h3>
+          <p class="w3-center w3-text-light-grey">Marcin Hołubowicz</p>
+            <hr>
+          <p>Main: Yasuo</p>
+            <hr>
+          <p>Główna linia: Mid</p>
+          <p><a href="http://eune.op.gg/summoner/userName=longestyeahboy" target="_blank" class="w3-button w3-light-grey w3-block"><i class="fas fa-chart-bar"></i> PROFIL OP.GG</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card w3-text-white" style="background-image: url(img/Taric2.jpg); background-size: cover; background-position: 80% 50%;">
+        <div class="w3-container">
+            <div style="width: 160px; height: 160px; padding: 5px; border-radius: 50%; margin: auto; margin-top: 16px; ">
+        <img src="img/Poro_King.png" style="width:150px; margin: auto; display: block; border-radius: 50%;" class="w3-card-4">
+                </div>
+          <h3 class="w3-center">Szuszel Bot</h3>
+          <p class="w3-center w3-text-light-grey">Dominik Piotrowski</p>
+            <hr>
+          <p>Main: Taric</p>
+            <hr>
+          <p>Główna linia: Support</p>
+          <p><a href="http://eune.op.gg/summoner/userName=szuszelbot" target="_blank" class="w3-button w3-light-grey w3-block"><i class="fas fa-chart-bar"></i> PROFIL OP.GG</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card w3-text-white" style="background-image: url(img/Karma2.jpg); background-size: cover; background-position: 80% 50%;">
+        <div class="w3-container">
+            <div style="width: 160px; height: 160px; padding: 5px; border-radius: 50%; margin: auto; margin-top: 16px; ">
+        <img src="img/2017_Worlds_Pickem_Poro.png" style="width:150px; margin: auto; display: block; border-radius: 50%;" class="w3-card-4">
+                </div>
+          <h3 class="w3-center">marchewa1505</h3>
+          <p class="w3-center w3-text-light-grey">Patryk Krupa</p>
+            <hr>
+          <p>Main: Karma</p>
+            <hr>
+          <p>Główna linia: Mid</p>
+          <p><a href="http://eune.op.gg/summoner/userName=marchewa1505" target="_blank" class="w3-button w3-light-grey w3-block"><i class="fas fa-chart-bar"></i> PROFIL OP.GG</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+     <div style="margin-top:64px" class="w3-center">
+    <i class="fas fa-cog fa-10x fa-spin"></i>
+  <p class="w3-large">Prace nadal trwają...</p>
+         </div>
+</div>
+    
+<div class="w3-container w3-dark-grey" style="padding:128px 16px; clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);" id="video">
+  <h3 class="w3-center">FILMY</h3>
+  <p class="w3-center w3-large">Tutaj jest opis</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l4 m12 s12" style="padding: 16px;">
+      <div class='embed-container'><iframe src='https://www.youtube.com/embed/nJFtAao04Uc?rel=0' frameborder='0' allowfullscreen></iframe></div>
+    </div>
+    <div class="w3-col l4 m12 s12" style="padding: 16px;">
+      <div class='embed-container'><iframe src='https://www.youtube.com/embed/R_fG69U1qpA?rel=0' frameborder='0' allowfullscreen></iframe></div>
+    </div>
+    <div class="w3-col l4 m12 s12" style="padding: 16px;">
+      <div class='embed-container'><iframe src='https://www.youtube.com/embed/iFyWRJLCukA?rel=0' frameborder='0' allowfullscreen></iframe></div>
+    </div>
+    <div class="w3-col l4 m12 s12" style="padding: 16px;">
+      <div class='embed-container'><iframe src='https://www.youtube.com/embed/xE6cM7WzPtU?rel=0' frameborder='0' allowfullscreen></iframe></div>
+    </div>
+    <div class="w3-col l4 m12 s12" style="padding: 16px;">
+      <div class='embed-container'><iframe src='https://www.youtube.com/embed/N7xg4dZzC_s?rel=0' frameborder='0' allowfullscreen></iframe></div>
+    </div>
+    <div class="w3-col l4 m12 s12" style="padding: 16px;">
+      <div class='embed-container'><iframe src='https://www.youtube.com/embed/UUlrbSgotvY?rel=0' frameborder='0' allowfullscreen></iframe></div>
+    </div>
+  </div>
+</div>
+<div class="w3-black" style="height: 50px; position: relative;">
+    <div class="w3-dark-grey" style="clip-path: polygon(100% 0, 0 0, 100% 100%); height: 100%; width: 100%;">
+    </div>
+</div>
+    
+<footer class="w3-center w3-black w3-padding-64" style="background-image: url(img/one%20giraffe.png); background-position: 3% 100%; background-size: contain; background-repeat: no-repeat;">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Do góry</a>
+</footer>
+
+    
+<script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
