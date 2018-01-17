@@ -229,7 +229,7 @@ body, html {
     </div>
   </div>
 </div>
-<div class="w3-black" style="height: 50px; position: relative; margin-top: -1px;">
+<div class="w3-black" style="height: 50px; position: relative; margin-top: -5px;">
     <div class="w3-dark-grey" style="clip-path: polygon(100% 0, 0 0, 100% 100%); height: 100%; width: 100%;">
     </div>
 </div>
@@ -240,13 +240,6 @@ body, html {
 
     
 <script>
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
 var mySidebar = document.getElementById("mySidebar");
 
 function w3_open() {
