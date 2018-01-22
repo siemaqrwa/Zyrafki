@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" href="img/Poro_King.png">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 <style>
@@ -101,11 +102,15 @@
     }
 
     tr {
-        background-color: #ddd; 
+        background-color: #ddd;
+        transition: linear 0.2s;
     }
     
     tr:nth-child(even) {
         background-color: #f2f2f2;
+    }
+    tr:hover {
+        background: #fff;
     }
 </style>
 
@@ -119,6 +124,7 @@
                 <a href="#team" class="w3-bar-item w3-button"><i class="fas fa-users"></i> DRUŻYNA</a>
                 <a href="#event" class="w3-bar-item w3-button"><i class="far fa-calendar"></i> WYDARZENIA</a>
                 <a href="#video" class="w3-bar-item w3-button"><i class="fas fa-video"></i> FILMY</a>
+                <a href="ts3server://every.iq.pl:9987" class="w3-bar-item w3-button"><i class="fas fa-microphone"></i> TeamSpeak3</a>
             </div>
 
 
@@ -171,7 +177,7 @@
             <div class="w3-col m4" style="height: 100%;">
                 <h3>Najnowsze Żyrafkowe akcje.</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-                <p><a href="#work" class="w3-button w3-black"><i class="fas fa-video"></i> Więcej filmów XD</a></p>
+                <p><a href="#work" class="w3-button w3-black"><i class="fas fa-video"></i> Więcej filmów</a></p>
             </div>
             <div class="w3-col m8">
                 <div class='embed-container'><iframe src='https://www.youtube.com/embed/iFyWRJLCukA?rel=0&controls=0' frameborder='0'></iframe></div>
@@ -366,7 +372,7 @@
         </div>
     </div>
 
-    <footer class="w3-center w3-black w3-padding-64" style="background-image: url(img/one%20giraffe.png); background-position: 3% 100%; background-size: contain; background-repeat: no-repeat;">
+    <footer class="w3-center w3-black w3-padding-64" style="background-image: url(img/one%20giraffe.png); background-position: 3% 100%; background-size: contain; background-repeat: no-repeat; clip-path: polygon(0 0%, 100% 20%, 100% 100%, 0 100%);">
         <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Do góry</a>
     </footer>
 
