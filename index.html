@@ -115,6 +115,89 @@
     tr:hover {
         background: #fff;
     }
+    
+    .v5-button {
+        height: 200px;
+        background-image: url(img/Summoners-Rift.jpg);
+        background-size: cover;
+        background-position: 50% 30%;
+        text-shadow: 0px 0px 8px #000;
+        transition: 0.2s linear;
+        cursor: pointer;
+    }
+    
+    .v5-button:hover {
+        background-position: 50% 35%;
+        filter: grayscale(80%);
+    }
+    
+    .v3-button {
+        height: 200px;
+        background-image: url(img/Twisted_Treeline.jpg);
+        background-size: cover;
+        background-position: 50% 30%;
+        text-shadow: 0px 0px 8px #000;
+        transition: 0.2s linear;
+        cursor: pointer;
+    }
+    
+    .v3-button:hover {
+        background-position: 50% 35%;
+        filter: grayscale(80%);
+    }
+    
+    /* Customize the label (the container) */
+.cb-container {
+  display: flex;
+  align-items: left;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cb-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+/* Create a custom checkbox */
+.checkmark {
+  display: block;
+  height: 128px;
+  padding: 16px;
+  width: 100%;
+  background-color: #eee;
+}
+
+
+.cb-container .checkmark .iconborder {
+  width: 64px;
+  height: 64px;
+  padding: 2px;
+  border-radius: 50%;
+  background: linear-gradient(#c5a565, #af8931, #6a5725);
+  margin-top: 16px;
+    float: left;
+}
+
+/* On mouse-over, add a grey background color */
+.cb-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cb-container input:checked ~ .checkmark {
+  background-color: #333;
+  color: #f1f1f1;
+}
 </style>
 
 <body>
@@ -341,6 +424,42 @@
             <i class="fas fa-cog fa-10x fa-spin"></i>
             <p class="w3-large">Prace nadal trwają...</p>
         </div>
+        
+            <div class="w3-xxlarge w3-center">LOSOWANIE DRUŻYNY - PRACE NAD HTML I CSS3</div><br>
+        <div style="margin-top:64px; box-shadow: 0px 0px 16px rgba(0,0,0,0.5);" class="w3-center w3-white">
+            <div class="w3-bar w3-black" style="width: 100%;">
+                <button class="w3-bar-item v5-button w3-xxlarge w3-text-white" onclick="openTab('5v5')" style="width: 50%;">5v5</button>
+                <button class="w3-bar-item v3-button w3-xxlarge w3-text-white" onclick="openTab('3v3')" style="width: 50%;">3v3</button>
+            </div>
+            
+            <div id="5v5" class="tab" style="display:none">
+                <h2>5v5</h2>
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left" style="position: absolute; top: 50%; transform: translateY(-50%); left: 96px;">Shatter Me</span>
+                        </span>
+                    </label>
+            </div>
+
+            <div id="3v3" class="tab w3-white" style="display:none">
+                <h2>3v3</h2>
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left" style="position: absolute; top: 50%; transform: translateY(-50%); left: 96px;">Shatter Me</span>
+                        </span>
+                    </label>
+            </div>
+        </div>
+
+            <p class="w3-large">Prace nadal trwają...</p>
     </div>
 
     <div class="w3-container w3-dark-grey" style="padding:128px 16px; clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 91%);" id="event">
@@ -411,6 +530,15 @@
 
         function w3_close() {
             mySidebar.style.display = "none";
+        }
+        
+        function openTab(tabName) {
+            var i;
+            var x = document.getElementsByClassName("tab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            document.getElementById(tabName).style.display = "block";  
         }
     </script>
 
