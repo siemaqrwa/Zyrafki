@@ -154,6 +154,7 @@
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
+  width: 50%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -175,10 +176,13 @@
   padding: 16px;
   width: 100%;
   background-color: #eee;
+  border-left: 0px solid #333;
+    transition: 0.2s linear;
 }
 
 
-.cb-container .checkmark .iconborder {
+.cb-container .checkmark .iconborder,
+    .teammate .iconborder {
   width: 64px;
   height: 64px;
   padding: 2px;
@@ -191,13 +195,72 @@
 /* On mouse-over, add a grey background color */
 .cb-container:hover input ~ .checkmark {
   background-color: #ccc;
+  border-left: 16px solid #333;
 }
 
 /* When the checkbox is checked, add a blue background */
 .cb-container input:checked ~ .checkmark {
-  background-color: #333;
-  color: #f1f1f1;
+  background-color: #B4EAB3;
+  border-left: 16px solid #7DEA7B;
 }
+    .submit {
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  border: none;
+  width: 100%;
+  height: 128px;
+  width: 100%;
+  background-color: #eee;
+    transition: 0.2s linear;
+    }
+    .submit:hover {
+  background-color: #ccc;
+    }
+    
+    .team3v3,
+    .team5v5 {
+        display: none;
+        width: 100%;
+    }
+    
+    .blue {
+        width: 50%;
+    }
+    
+    .blue .teammate {
+        font-size: 22px;
+        position: relative;
+        height: 128px;
+        padding: 16px;
+        width: 100%;
+        background-color: #a3cfec;
+        border-left: 16px solid #64b1e4;
+        margin-bottom: 20px;
+    }
+    
+    .red {
+        width: 50%;
+        float: right;
+    }
+    
+    .red .teammate {
+        font-size: 22px;
+        position: relative;
+        height: 128px;
+        padding: 16px;
+        width: 100%;
+        background-color: #e2b6b3;
+        border-left: 16px solid #d67b77;
+        margin-bottom: 20px;
+    }
+    
+    .qwetext {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 112px;
+    }
 </style>
 
 <body>
@@ -434,32 +497,308 @@
             
             <div id="5v5" class="tab" style="display:none">
                 <h2>5v5</h2>
+                    <label class="cb-container w3-right">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Multi.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Longest Yeah Boy</span>
+                        </span>
+                    </label>
+                
                     <label class="cb-container">
                         <input type="checkbox">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
                         </div>
-                        <span class="w3-left" style="position: absolute; top: 50%; transform: translateY(-50%); left: 96px;">Shatter Me</span>
+                        <span class="w3-left qwetext">Shàtter Me</span>
                         </span>
                     </label>
+                
+                    <label class="cb-container w3-right">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/2017_Worlds_Pickem_Poro.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">marchewa1505</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Poro_King.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Szuszel bot</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container w3-right">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/PROJECT_Ashe.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shiroeyuuki</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Rubber_Ducky.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">klywenc123</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container w3-right">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Drop_Dead.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Hardkorufox</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Shiro.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shátter Me</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Penguin_Toss.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Tweenese</span>
+                        </span>
+                    </label>
+                
+                    <button class="submit" onclick="losuj5v5()">Generuj druynę</button>
+                <div class="team5v5" id="team5v5">
+                    <div class="red">
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                    </div>
+                    <div class="blue">
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="3v3" class="tab w3-white" style="display:none">
                 <h2>3v3</h2>
+                    <label class="cb-container w3-right">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Multi.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Longest Yeah Boy</span>
+                        </span>
+                    </label>
+                
                     <label class="cb-container">
                         <input type="checkbox">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
                         </div>
-                        <span class="w3-left" style="position: absolute; top: 50%; transform: translateY(-50%); left: 96px;">Shatter Me</span>
+                        <span class="w3-left qwetext">Shàtter Me</span>
                         </span>
                     </label>
+                
+                    <label class="cb-container w3-right">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/2017_Worlds_Pickem_Poro.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">marchewa1505</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Poro_King.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Szuszel bot</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container w3-right">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/PROJECT_Ashe.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shiroeyuuki</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Rubber_Ducky.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">klywenc123</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container w3-right">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Drop_Dead.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Hardkorufox</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Shiro.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shátter Me</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container">
+                        <input type="checkbox">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Penguin_Toss.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Tweenese</span>
+                        </span>
+                    </label>
+                
+                    <button class="submit" onclick="losuj3v3()">Generuj druynę</button>
+                
+                <div class="team3v3" id="team3v3">
+                    <div class="red">
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                    </div>
+                    <div class="blue">
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">Shatter Me</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-            <p class="w3-large">Prace nadal trwają...</p>
+        <div style="margin-top:64px" class="w3-center">
+            <i class="fas fa-cog fa-10x fa-spin"></i>
+            <p class="w3-large">Prace TUTAJ TEŻ nadal trwają...</p>
+        </div>
     </div>
 
     <div class="w3-container w3-dark-grey" style="padding:128px 16px; clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 91%);" id="event">
@@ -539,6 +878,14 @@
                 x[i].style.display = "none";  
             }
             document.getElementById(tabName).style.display = "block";  
+        }
+        
+        function losuj3v3(){
+            document.getElementById("team3v3").style.display = "block";
+        }
+        
+        function losuj5v5(){
+            document.getElementById("team5v5").style.display = "block";
         }
     </script>
 
