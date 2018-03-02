@@ -229,7 +229,6 @@
     }
     
     .blue .teammate {
-        display: none;
         font-size: 22px;
         position: relative;
         height: 128px;
@@ -246,7 +245,6 @@
     }
     
     .red .teammate {
-        display: none;
         font-size: 22px;
         position: relative;
         height: 128px;
@@ -490,7 +488,7 @@
             <p class="w3-large">Prace nadal trwają...</p>
         </div>
         
-            <div class="w3-xxlarge w3-center">LOSOWANIE DRUŻYNY - PRACE NAD HTML I CSS3</div><br>
+            <div class="w3-xxlarge w3-center">LOSOWANIE DRUŻYNY - ALFA</div><br>
         <div style="margin-top:64px; box-shadow: 0px 0px 16px rgba(0,0,0,0.5);" class="w3-center w3-white">
             <div class="w3-bar w3-black" style="width: 100%;">
                 <button class="w3-bar-item v5-button w3-xxlarge w3-text-white" onclick="openTab('5v5')" style="width: 50%;">5v5</button>
@@ -754,43 +752,43 @@
                 
                 <div class="team3v3" id="team3v3">
                     <div class="red">
-                        <div class="teammate" id="LongestYeahBoyR">
+                        <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Multi.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red1img"> 
                         </div>
-                        <span class="w3-left qwetext">Longest Yeah Boy</span>
-                        </div>
-                        <div class="teammate" id="ShatterMeMaciekR">
-                        <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
-                        </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="red1text"></span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red2img"> 
                         </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="red2text">??????????</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red3img"> 
+                        </div>
+                        <span class="w3-left qwetext" id="red3text">???????????</span>
                         </div>
                     </div>
                     <div class="blue">
                         <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue1img"> 
                         </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
-                        </div>
-                        <div class="teammate">
-                        <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
-                        </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="blue1text">??????????</span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue2img"> 
                         </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="blue2text">??????????</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue3img"> 
+                        </div>
+                        <span class="w3-left qwetext" id="blue3text">??????????</span>
                         </div>
                     </div>
                 </div>
@@ -890,6 +888,7 @@
             var x=0;
             var checkbox = [];
             var red = [];
+            var blue = [];
             for (z = 0; z < xd.length; z++){
                 if (xd[z].checked == true) {
                 checkbox[x] = xd[z].alt;
@@ -900,14 +899,262 @@
             var a1 = Math.floor(Math.random()*6);
             var a2 = Math.floor(Math.random()*6);
             var a3 = Math.floor(Math.random()*6);
-                if (a1!=a2 && a1!=a3 && a2!=a3) {
+            var a4 = Math.floor(Math.random()*6);
+            var a5 = Math.floor(Math.random()*6);
+            var a6 = Math.floor(Math.random()*6);
+                if (a1!=a2 && a1!=a3 && a1!=a4 && a1!=a5 && a1!=a6 && a2!=a3 && a2!=a4 && a2!=a5 && a2!=a6 && a3!=a4 && a3!=a5 && a3!=a6 && a4!=a5 && a4!=a6 && a5!=a6) {
                     i=1;
                 }
             }
             red[0] = checkbox[a1];
             red[1] = checkbox[a2];
             red[2] = checkbox[a3];
+            
+            blue[0] = checkbox[a4];
+            blue[1] = checkbox[a5];
+            blue[2] = checkbox[a6];
+            
             alert(red[0] + " " + red[1] + " " + red[2]);
+            
+            var red1img = document.getElementById("red1img");
+            var red1text = document.getElementById("red1text");
+            
+            if(red[0]=="Longest Yeah Boy") {
+                red1img.src = "img/Multi.png";
+                red1text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(red[0]=="Shàtter Me") {
+                red1img.src = "img/Mark_of_the_Star_Guardian.png";
+                red1text.innerHTML = "Shàtter Me";
+            }
+            else if(red[0]=="marchewa1505") {
+                red1img.src = "img/2017_Worlds_Pickem_Poro.png";
+                red1text.innerHTML = "marchewa1505";
+            }
+            else if(red[0]=="Szuszel Bot") {
+                red1img.src = "img/Poro_King.png";
+                red1text.innerHTML = "Szuszel Bot";
+            }
+            else if(red[0]=="Shiroeyuuki") {
+                red1img.src = "img/PROJECT_Ashe.png";
+                red1text.innerHTML = "Shiroeyuuki";
+            }
+            else if(red[0]=="klywenc123") {
+                red1img.src = "img/Rubber_Ducky.png";
+                red1text.innerHTML = "klywenc123";
+            }
+            else if(red[0]=="Hardkorufox") {
+                red1img.src = "img/Drop_Dead.png";
+                red1text.innerHTML = "Hardkorufox";
+            }
+            else if(red[0]=="Shátter Me") {
+                red1img.src = "img/Shiro.png";
+                red1text.innerHTML = "Shátter Me";
+            }
+            else if(red[0]=="Tweenese") {
+                red1img.src = "img/Penguin_Toss.png";
+                red1text.innerHTML = "Tweenese";
+            }
+            
+            var red2img = document.getElementById("red2img");
+            var red2text = document.getElementById("red2text");
+            
+            if(red[1]=="Longest Yeah Boy") {
+                red2img.src = "img/Multi.png";
+                red2text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(red[1]=="Shàtter Me") {
+                red2img.src = "img/Mark_of_the_Star_Guardian.png";
+                red2text.innerHTML = "Shàtter Me";
+            }
+            else if(red[1]=="marchewa1505") {
+                red2img.src = "img/2017_Worlds_Pickem_Poro.png";
+                red2text.innerHTML = "marchewa1505";
+            }
+            else if(red[1]=="Szuszel Bot") {
+                red2img.src = "img/Poro_King.png";
+                red2text.innerHTML = "Szuszel Bot";
+            }
+            else if(red[1]=="Shiroeyuuki") {
+                red2img.src = "img/PROJECT_Ashe.png";
+                red2text.innerHTML = "Shiroeyuuki";
+            }
+            else if(red[1]=="klywenc123") {
+                red2img.src = "img/Rubber_Ducky.png";
+                red2text.innerHTML = "klywenc123";
+            }
+            else if(red[1]=="Hardkorufox") {
+                red2img.src = "img/Drop_Dead.png";
+                red2text.innerHTML = "Hardkorufox";
+            }
+            else if(red[1]=="Shátter Me") {
+                red2img.src = "img/Shiro.png";
+                red2text.innerHTML = "Shátter Me";
+            }
+            else if(red[1]=="Tweenese") {
+                red2img.src = "img/Penguin_Toss.png";
+                red2text.innerHTML = "Tweenese";
+            }
+            
+            var red3img = document.getElementById("red3img");
+            var red3text = document.getElementById("red3text");
+            
+            if(red[2]=="Longest Yeah Boy") {
+                red3img.src = "img/Multi.png";
+                red3text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(red[2]=="Shàtter Me") {
+                red3img.src = "img/Mark_of_the_Star_Guardian.png";
+                red3text.innerHTML = "Shàtter Me";
+            }
+            else if(red[2]=="marchewa1505") {
+                red3img.src = "img/2017_Worlds_Pickem_Poro.png";
+                red3text.innerHTML = "marchewa1505";
+            }
+            else if(red[2]=="Szuszel Bot") {
+                red3img.src = "img/Poro_King.png";
+                red3text.innerHTML = "Szuszel Bot";
+            }
+            else if(red[2]=="Shiroeyuuki") {
+                red3img.src = "img/PROJECT_Ashe.png";
+                red3text.innerHTML = "Shiroeyuuki";
+            }
+            else if(red[2]=="klywenc123") {
+                red3img.src = "img/Rubber_Ducky.png";
+                red3text.innerHTML = "klywenc123";
+            }
+            else if(red[2]=="Hardkorufox") {
+                red3img.src = "img/Drop_Dead.png";
+                red3text.innerHTML = "Hardkorufox";
+            }
+            else if(red[2]=="Shátter Me") {
+                red3img.src = "img/Shiro.png";
+                red3text.innerHTML = "Shátter Me";
+            }
+            else if(red[2]=="Tweenese") {
+                red3img.src = "img/Penguin_Toss.png";
+                red3text.innerHTML = "Tweenese";
+            }
+            
+            var blue1img = document.getElementById("blue1img");
+            var blue1text = document.getElementById("blue1text");
+            
+            if(blue[0]=="Longest Yeah Boy") {
+                blue1img.src = "img/Multi.png";
+                blue1text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(blue[0]=="Shàtter Me") {
+                blue1img.src = "img/Mark_of_the_Star_Guardian.png";
+                blue1text.innerHTML = "Shàtter Me";
+            }
+            else if(blue[0]=="marchewa1505") {
+                blue1img.src = "img/2017_Worlds_Pickem_Poro.png";
+                blue1text.innerHTML = "marchewa1505";
+            }
+            else if(blue[0]=="Szuszel Bot") {
+                blue1img.src = "img/Poro_King.png";
+                blue1text.innerHTML = "Szuszel Bot";
+            }
+            else if(blue[0]=="Shiroeyuuki") {
+                blue1img.src = "img/PROJECT_Ashe.png";
+                blue1text.innerHTML = "Shiroeyuuki";
+            }
+            else if(blue[0]=="klywenc123") {
+                blue1img.src = "img/Rubber_Ducky.png";
+                blue1text.innerHTML = "klywenc123";
+            }
+            else if(blue[0]=="Hardkorufox") {
+                blue1img.src = "img/Drop_Dead.png";
+                blue1text.innerHTML = "Hardkorufox";
+            }
+            else if(blue[0]=="Shátter Me") {
+                blue1img.src = "img/Shiro.png";
+                blue1text.innerHTML = "Shátter Me";
+            }
+            else if(blue[0]=="Tweenese") {
+                blue1img.src = "img/Penguin_Toss.png";
+                blue1text.innerHTML = "Tweenese";
+            }
+            
+            var blue2img = document.getElementById("blue2img");
+            var blue2text = document.getElementById("blue2text");
+            
+            if(blue[1]=="Longest Yeah Boy") {
+                blue2img.src = "img/Multi.png";
+                blue2text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(blue[1]=="Shàtter Me") {
+                blue2img.src = "img/Mark_of_the_Star_Guardian.png";
+                blue2text.innerHTML = "Shàtter Me";
+            }
+            else if(blue[1]=="marchewa1505") {
+                blue2img.src = "img/2017_Worlds_Pickem_Poro.png";
+                blue2text.innerHTML = "marchewa1505";
+            }
+            else if(blue[1]=="Szuszel Bot") {
+                blue2img.src = "img/Poro_King.png";
+                blue2text.innerHTML = "Szuszel Bot";
+            }
+            else if(blue[1]=="Shiroeyuuki") {
+                blue2img.src = "img/PROJECT_Ashe.png";
+                blue2text.innerHTML = "Shiroeyuuki";
+            }
+            else if(blue[1]=="klywenc123") {
+                blue2img.src = "img/Rubber_Ducky.png";
+                blue2text.innerHTML = "klywenc123";
+            }
+            else if(blue[1]=="Hardkorufox") {
+                blue2img.src = "img/Drop_Dead.png";
+                blue2text.innerHTML = "Hardkorufox";
+            }
+            else if(blue[1]=="Shátter Me") {
+                blue2img.src = "img/Shiro.png";
+                blue2text.innerHTML = "Shátter Me";
+            }
+            else if(blue[1]=="Tweenese") {
+                blue2img.src = "img/Penguin_Toss.png";
+                blue2text.innerHTML = "Tweenese";
+            }
+            
+            var blue3img = document.getElementById("blue3img");
+            var blue3text = document.getElementById("blue3text");
+            
+            if(blue[2]=="Longest Yeah Boy") {
+                blue3img.src = "img/Multi.png";
+                blue3text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(blue[2]=="Shàtter Me") {
+                blue3img.src = "img/Mark_of_the_Star_Guardian.png";
+                blue3text.innerHTML = "Shàtter Me";
+            }
+            else if(blue[2]=="marchewa1505") {
+                blue3img.src = "img/2017_Worlds_Pickem_Poro.png";
+                blue3text.innerHTML = "marchewa1505";
+            }
+            else if(blue[2]=="Szuszel Bot") {
+                blue3img.src = "img/Poro_King.png";
+                blue3text.innerHTML = "Szuszel Bot";
+            }
+            else if(blue[2]=="Shiroeyuuki") {
+                blue3img.src = "img/PROJECT_Ashe.png";
+                blue3text.innerHTML = "Shiroeyuuki";
+            }
+            else if(blue[2]=="klywenc123") {
+                blue3img.src = "img/Rubber_Ducky.png";
+                blue3text.innerHTML = "klywenc123";
+            }
+            else if(blue[2]=="Hardkorufox") {
+                blue3img.src = "img/Drop_Dead.png";
+                blue3text.innerHTML = "Hardkorufox";
+            }
+            else if(blue[2]=="Shátter Me") {
+                blue3img.src = "img/Shiro.png";
+                blue3text.innerHTML = "Shátter Me";
+            }
+            else if(blue[2]=="Tweenese") {
+                blue3img.src = "img/Penguin_Toss.png";
+                blue3text.innerHTML = "Tweenese";
+            }
         }
         
     </script>
