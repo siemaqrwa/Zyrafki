@@ -535,7 +535,7 @@
                         <div class="iconborder">
                             <img src="img/Poro_King.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
                         </div>
-                        <span class="w3-left qwetext">Szuszel bot</span>
+                        <span class="w3-left qwetext">Szuszel Bot</span>
                         </span>
                     </label>
                 
@@ -589,7 +589,7 @@
                         </span>
                     </label>
                 
-                    <button class="submit" onclick="losuj5v5()">Generuj druynę</button>
+                    <button class="submit" onclick="losuj5v5()">Generuj drużnę</button>
                 <div class="team5v5" id="team5v5">
                     <div class="red">
                         <div class="teammate">
@@ -661,7 +661,7 @@
             <div id="3v3" class="tab w3-white" style="display:none">
                 <h2>3v3</h2>
                     <label class="cb-container w3-right">
-                        <input type="checkbox" class="3v3a">
+                        <input type="checkbox" name="3v3a" alt="Longest Yeah Boy">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Multi.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -671,7 +671,7 @@
                     </label>
                 
                     <label class="cb-container">
-                        <input type="checkbox" class="3v3a">
+                        <input type="checkbox" name="3v3a" alt="Shàtter Me">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -681,7 +681,7 @@
                     </label>
                 
                     <label class="cb-container w3-right">
-                        <input type="checkbox" class="3v3a">
+                        <input type="checkbox" name="3v3a" alt="marchewa1505">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/2017_Worlds_Pickem_Poro.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -691,17 +691,17 @@
                     </label>
                 
                     <label class="cb-container">
-                        <input type="checkbox" class="3v3a">
+                        <input type="checkbox" name="3v3a" alt="Szuszel Bot">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Poro_King.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
                         </div>
-                        <span class="w3-left qwetext">Szuszel bot</span>
+                        <span class="w3-left qwetext">Szuszel Bot</span>
                         </span>
                     </label>
                 
                     <label class="cb-container w3-right">
-                        <input type="checkbox" class="3v3a">
+                        <input type="checkbox" name="3v3a" alt="Shiroeyuuki">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/PROJECT_Ashe.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -711,7 +711,7 @@
                     </label>
                 
                     <label class="cb-container">
-                        <input type="checkbox" class="3v3a">
+                        <input type="checkbox" name="3v3a" alt="klywenc123">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Rubber_Ducky.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -721,7 +721,7 @@
                     </label>
                 
                     <label class="cb-container w3-right">
-                        <input type="checkbox" class="3v3a">
+                        <input type="checkbox" name="3v3a" alt="Hardkorufox">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Drop_Dead.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -731,7 +731,7 @@
                     </label>
                 
                     <label class="cb-container">
-                        <input type="checkbox" class="3v3a">
+                        <input type="checkbox" name="3v3a" alt="Shátter Me">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Shiro.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -741,7 +741,7 @@
                     </label>
                 
                     <label class="cb-container">
-                        <input type="checkbox" class="3v3a">
+                        <input type="checkbox" name="3v3a" alt="Tweenese">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Penguin_Toss.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -750,7 +750,7 @@
                         </span>
                     </label>
                 
-                    <button class="submit" onclick="losuj3v3()">Generuj druynę</button>
+                    <button class="submit" onclick="losuj3v3()">Generuj drużnę</button>
                 
                 <div class="team3v3" id="team3v3">
                     <div class="red">
@@ -860,8 +860,6 @@
 
     <script>
         var mySidebar = document.getElementById("mySidebar");
-        const red = [];
-        const blue = [];
 
         function w3_open() {
             if (mySidebar.style.display === 'block') {
@@ -886,18 +884,32 @@
         
         function losuj3v3() {
             document.getElementById("team3v3").style.display = "block";
-            const xd = document.getElementsByClassName("3v3a");
+            var xd = document.getElementsByName("3v3a");
             var z;
-            const checkbox = [];
-            for (z=0; z>xd.length; z++){
+            var i;
+            var x=0;
+            var checkbox = [];
+            var red = [];
+            for (z = 0; z < xd.length; z++){
                 if (xd[z].checked == true) {
-                    checkbox.push = z;
+                checkbox[x] = xd[z].alt;
+                x++;
                 }
-                else {}
             }
-            alert(checkbox.length);
-            
+            while (i!=1) {
+            var a1 = Math.floor(Math.random()*6);
+            var a2 = Math.floor(Math.random()*6);
+            var a3 = Math.floor(Math.random()*6);
+                if (a1!=a2 && a1!=a3 && a2!=a3) {
+                    i=1;
+                }
+            }
+            red[0] = checkbox[a1];
+            red[1] = checkbox[a2];
+            red[2] = checkbox[a3];
+            alert(red[0] + " " + red[1] + " " + red[2]);
         }
+        
     </script>
 
 </body>
