@@ -172,7 +172,8 @@
 /* Create a custom checkbox */
 .checkmark {
   display: block;
-  height: 128px;
+  height: 108px;
+  margin: 10px;
   padding: 16px;
   width: 100%;
   background-color: #eee;
@@ -188,7 +189,7 @@
   padding: 2px;
   border-radius: 50%;
   background: linear-gradient(#c5a565, #af8931, #6a5725);
-  margin-top: 16px;
+  margin-top: 6px;
     float: left;
 }
 
@@ -231,9 +232,10 @@
     .blue .teammate {
         font-size: 22px;
         position: relative;
-        height: 128px;
+        height: 108px;
+        margin: 10px;
         padding: 16px;
-        width: 100%;
+        width: calc(100%-20px);
         background-color: #a3cfec;
         border-left: 16px solid #64b1e4;
         margin-bottom: 20px;
@@ -247,9 +249,11 @@
     .red .teammate {
         font-size: 22px;
         position: relative;
-        height: 128px;
+        top: -10px;
+        height: 108px;
+        margin: 10px;
         padding: 16px;
-        width: 100%;
+        width: calc(100%-20px);
         background-color: #e2b6b3;
         border-left: 16px solid #d67b77;
         margin-bottom: 20px;
@@ -326,7 +330,7 @@
             <div class="w3-col m4" style="height: 100%;">
                 <h3>Najnowsze Żyrafkowe akcje.</h3>
                 <p>Bądz na bieżąco i obejrzyj najlepsze i najśmiejszniejsze akcje Żyrafek.</p>
-                <p><a href="#work" class="w3-button w3-black"><i class="fas fa-video"></i> Więcej filmów</a></p>
+                <p><a href="#video" class="w3-button w3-black"><i class="fas fa-video"></i> Więcej filmów</a></p>
             </div>
             <div class="w3-col m8">
                 <div class='embed-container'><iframe src='https://www.youtube.com/embed/xajKTOTSPQM?rel=0&controls=0' frameborder='0'></iframe></div>
@@ -510,7 +514,7 @@
                         <p>Main: Vayne</p>
                         <hr>
                         <p>Główna linia: ADC</p>
-                        <p><a href="http://eune.op.gg/summoner/userName=NBSinner" target="_blank" class="w3-button w3-light-grey w3-block"><i class="fas fa-chart-bar"></i> PROFIL OP.GG</a></p>
+                        <p><a href="http://eune.op.gg/summoner/userName=panbannan" target="_blank" class="w3-button w3-light-grey w3-block"><i class="fas fa-chart-bar"></i> PROFIL OP.GG</a></p>
                     </div>
                 </div>
             </div>
@@ -520,17 +524,17 @@
             <p class="w3-large">Prace nadal trwają...</p>
         </div>
         
-            <div class="w3-xxlarge w3-center">LOSOWANIE DRUŻYNY - ALFA</div><br>
-        <div style="margin-top:64px; box-shadow: 0px 0px 16px rgba(0,0,0,0.5);" class="w3-center w3-white">
+            <div class="w3-xxlarge w3-center">LOSOWANIE DRUŻYNY - BETA</div>
+            <p class="w3-large w3-center">Jeśli zauważyłeś buga, wyślij zrzut ekranu do Szuszla!</p>
+        <div style="margin-top:64px; box-shadow: 0px 0px 16px rgba(0,0,0,0.5);" class="w3-white">
             <div class="w3-bar w3-black" style="width: 100%;">
                 <button class="w3-bar-item v5-button w3-xxlarge w3-text-white" onclick="openTab('5v5')" style="width: 50%;">5v5</button>
                 <button class="w3-bar-item v3-button w3-xxlarge w3-text-white" onclick="openTab('3v3')" style="width: 50%;">3v3</button>
             </div>
-            
-            <div id="5v5" class="tab" style="display:none">
-                <h2>5v5</h2>
+            <div id="5v5" class="tab" style="display:none; padding-bottom: 1px;">
+                <h2 class="w3-center">5v5</h2>
                     <label class="cb-container w3-right">
-                        <input type="checkbox" class="5v5a">
+                        <input type="checkbox" name="5v5a" alt="Longest Yeah Boy">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Multi.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -540,7 +544,7 @@
                     </label>
                 
                     <label class="cb-container">
-                        <input type="checkbox" class="5v5a">
+                        <input type="checkbox" name="5v5a" alt="Shàtter Me">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -550,7 +554,7 @@
                     </label>
                 
                     <label class="cb-container w3-right">
-                        <input type="checkbox" class="5v5a">
+                        <input type="checkbox" name="5v5a" alt="marchewa1505">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/2017_Worlds_Pickem_Poro.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -560,7 +564,7 @@
                     </label>
                 
                     <label class="cb-container">
-                        <input type="checkbox" class="5v5a">
+                        <input type="checkbox" name="5v5a" alt="Szuszel Bot">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Poro_King.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -570,7 +574,7 @@
                     </label>
                 
                     <label class="cb-container w3-right">
-                        <input type="checkbox" class="5v5a">
+                        <input type="checkbox" name="5v5a" alt="Shiroeyuuki">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/PROJECT_Ashe.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -580,7 +584,7 @@
                     </label>
                 
                     <label class="cb-container">
-                        <input type="checkbox" class="5v5a">
+                        <input type="checkbox" name="5v5a" alt="klywenc123">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Rubber_Ducky.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -590,7 +594,7 @@
                     </label>
                 
                     <label class="cb-container w3-right">
-                        <input type="checkbox" class="5v5a">
+                        <input type="checkbox" name="5v5a" alt="Hardkorufox">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Drop_Dead.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -600,7 +604,7 @@
                     </label>
                 
                     <label class="cb-container">
-                        <input type="checkbox" class="5v5a">
+                        <input type="checkbox" name="5v5a" alt="Shátter Me">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Shiro.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -609,8 +613,18 @@
                         </span>
                     </label>
                 
+                    <label class="cb-container w3-right">
+                        <input type="checkbox" name="5v5a" alt="NBSinner">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Heartseeker_Quinn.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">NBSinner</span>
+                        </span>
+                    </label>
+                
                     <label class="cb-container">
-                        <input type="checkbox" class="5v5a">
+                        <input type="checkbox" name="5v5a" alt="Tweenese">
                         <span class="checkmark" class="w3-left">
                         <div class="iconborder">
                             <img src="img/Penguin_Toss.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
@@ -619,77 +633,87 @@
                         </span>
                     </label>
                 
+                    <label class="cb-container">
+                        <input type="checkbox" name="5v5a" alt="PanBannan">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Spirit_Phoenix.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">PanBannan</span>
+                        </span>
+                    </label>
+                
                     <button class="submit" onclick="losuj5v5()">Generuj drużnę</button>
                 <div class="team5v5" id="team5v5">
                     <div class="red">
                         <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red1img5"> 
                         </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
-                        </div>
-                        <div class="teammate">
-                        <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
-                        </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="red1text5">Za mało wybranych graczy!</span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red2img5"> 
                         </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
-                        </div>
-                        <div class="teammate">
-                        <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
-                        </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="red2text5">Za mało wybranych graczy!</span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red3img5"> 
                         </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="red3text5">Za mało wybranych graczy!</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red4img5"> 
+                        </div>
+                        <span class="w3-left qwetext" id="red4text5">Za mało wybranych graczy!</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red5img5"> 
+                        </div>
+                        <span class="w3-left qwetext" id="red5text5">Za mało wybranych graczy!</span>
                         </div>
                     </div>
                     <div class="blue">
                         <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue1img5"> 
                         </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
-                        </div>
-                        <div class="teammate">
-                        <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
-                        </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="blue1text5">Za mało wybranych graczy!</span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue2img5"> 
                         </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
-                        </div>
-                        <div class="teammate">
-                        <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
-                        </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="blue2text5">Za mało wybranych graczy!</span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
-                            <img src="img/Mark_of_the_Star_Guardian.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue3img5"> 
                         </div>
-                        <span class="w3-left qwetext">Shatter Me</span>
+                        <span class="w3-left qwetext" id="blue3text5">Za mało wybranych graczy!</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue4img5"> 
+                        </div>
+                        <span class="w3-left qwetext" id="blue4text5">Za mało wybranych graczy!</span>
+                        </div>
+                        <div class="teammate">
+                        <div class="iconborder">
+                            <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue5img5"> 
+                        </div>
+                        <span class="w3-left qwetext" id="blue5text5">Za mało wybranych graczy!</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="3v3" class="tab w3-white" style="display:none">
-                <h2>3v3</h2>
+            <div id="3v3" class="tab w3-white" style="display:none; padding-bottom: 1px;">
+                <h2 class="w3-center">3v3</h2>
                     <label class="cb-container w3-right">
                         <input type="checkbox" name="3v3a" alt="Longest Yeah Boy">
                         <span class="checkmark" class="w3-left">
@@ -770,6 +794,16 @@
                         </span>
                     </label>
                 
+                    <label class="cb-container w3-right">
+                        <input type="checkbox" name="3v3a" alt="NBSinner">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Heartseeker_Quinn.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">NBSinner</span>
+                        </span>
+                    </label>
+                
                     <label class="cb-container">
                         <input type="checkbox" name="3v3a" alt="Tweenese">
                         <span class="checkmark" class="w3-left">
@@ -777,6 +811,16 @@
                             <img src="img/Penguin_Toss.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
                         </div>
                         <span class="w3-left qwetext">Tweenese</span>
+                        </span>
+                    </label>
+                
+                    <label class="cb-container">
+                        <input type="checkbox" name="3v3a" alt="PanBannan">
+                        <span class="checkmark" class="w3-left">
+                        <div class="iconborder">
+                            <img src="img/Spirit_Phoenix.png" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4"> 
+                        </div>
+                        <span class="w3-left qwetext">PanBannan</span>
                         </span>
                     </label>
                 
@@ -788,19 +832,19 @@
                         <div class="iconborder">
                             <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red1img"> 
                         </div>
-                        <span class="w3-left qwetext" id="red1text"></span>
+                        <span class="w3-left qwetext" id="red1text">Za mało wybranych graczy!</span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
                             <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red2img"> 
                         </div>
-                        <span class="w3-left qwetext" id="red2text">??????????</span>
+                        <span class="w3-left qwetext" id="red2text">Za mało wybranych graczy!</span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
                             <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="red3img"> 
                         </div>
-                        <span class="w3-left qwetext" id="red3text">???????????</span>
+                        <span class="w3-left qwetext" id="red3text">Za mało wybranych graczy!?</span>
                         </div>
                     </div>
                     <div class="blue">
@@ -808,19 +852,19 @@
                         <div class="iconborder">
                             <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue1img"> 
                         </div>
-                        <span class="w3-left qwetext" id="blue1text">??????????</span>
+                        <span class="w3-left qwetext" id="blue1text">Za mało wybranych graczy!</span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
                             <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue2img"> 
                         </div>
-                        <span class="w3-left qwetext" id="blue2text">??????????</span>
+                        <span class="w3-left qwetext" id="blue2text">Za mało wybranych graczy!</span>
                         </div>
                         <div class="teammate">
                         <div class="iconborder">
                             <img src="" style="width:60px; display: block; border-radius: 50%;" class="w3-card-4" id="blue3img"> 
                         </div>
-                        <span class="w3-left qwetext" id="blue3text">??????????</span>
+                        <span class="w3-left qwetext" id="blue3text">Za mało wybranych graczy!</span>
                         </div>
                     </div>
                 </div>
@@ -985,6 +1029,18 @@
                 red1img.src = "img/Penguin_Toss.png";
                 red1text.innerHTML = "Tweenese";
             }
+            else if(red[0]=="NBSinner") {
+                red1img.src = "img/Heartseeker_Quinn.png";
+                red1text.innerHTML = "NBSinner";
+            }
+            else if(red[0]=="PanBannan") {
+                red1img.src = "img/Spirit_Phoenix.png";
+                red1text.innerHTML = "PanBannan";
+            }
+            else {
+                red1img.src = "img/Purple_Super_Minion.png";
+                red1text.innerHTML = "Czerwony Super Minion!";
+            }
             
             var red2img = document.getElementById("red2img");
             var red2text = document.getElementById("red2text");
@@ -1025,6 +1081,19 @@
                 red2img.src = "img/Penguin_Toss.png";
                 red2text.innerHTML = "Tweenese";
             }
+            else if(red[1]=="NBSinner") {
+                red2img.src = "img/Heartseeker_Quinn.png";
+                red2text.innerHTML = "NBSinner";
+            }
+            else if(red[1]=="PanBannan") {
+                red2img.src = "img/Spirit_Phoenix.png";
+                red2text.innerHTML = "PanBannan";
+            }
+            else {
+                red2img.src = "img/Purple_Super_Minion.png";
+                red2text.innerHTML = "Czerwony Super Minion!";
+            }
+            
             
             var red3img = document.getElementById("red3img");
             var red3text = document.getElementById("red3text");
@@ -1064,6 +1133,18 @@
             else if(red[2]=="Tweenese") {
                 red3img.src = "img/Penguin_Toss.png";
                 red3text.innerHTML = "Tweenese";
+            }
+            else if(red[2]=="NBSinner") {
+                red3img.src = "img/Heartseeker_Quinn.png";
+                red3text.innerHTML = "NBSinner";
+            }
+            else if(red[2]=="PanBannan") {
+                red3img.src = "img/Spirit_Phoenix.png";
+                red3text.innerHTML = "PanBannan";
+            }
+            else {
+                red3img.src = "img/Purple_Super_Minion.png";
+                red3text.innerHTML = "Czerwony Super Minion!";
             }
             
             var blue1img = document.getElementById("blue1img");
@@ -1105,6 +1186,18 @@
                 blue1img.src = "img/Penguin_Toss.png";
                 blue1text.innerHTML = "Tweenese";
             }
+            else if(blue[0]=="NBSinner") {
+                blue1img.src = "img/Heartseeker_Quinn.png";
+                blue1text.innerHTML = "NBSinner";
+            }
+            else if(blue[0]=="PanBannan") {
+                blue1img.src = "img/Spirit_Phoenix.png";
+                blue1text.innerHTML = "PanBannan";
+            }
+            else {
+                blue1img.src = "img/Blue_Super_Minion.png";
+                blue1text.innerHTML = "Niebieski Super Minion!";
+            }
             
             var blue2img = document.getElementById("blue2img");
             var blue2text = document.getElementById("blue2text");
@@ -1145,6 +1238,18 @@
                 blue2img.src = "img/Penguin_Toss.png";
                 blue2text.innerHTML = "Tweenese";
             }
+            else if(blue[1]=="NBSinner") {
+                blue2img.src = "img/Heartseeker_Quinn.png";
+                blue2text.innerHTML = "NBSinner";
+            }
+            else if(blue[1]=="PanBannan") {
+                blue2img.src = "img/Spirit_Phoenix.png";
+                blue2text.innerHTML = "PanBannan";
+            }
+            else {
+                blue2img.src = "img/Blue_Super_Minion.png";
+                blue2text.innerHTML = "Niebieski Super Minion!";
+            }
             
             var blue3img = document.getElementById("blue3img");
             var blue3text = document.getElementById("blue3text");
@@ -1184,6 +1289,593 @@
             else if(blue[2]=="Tweenese") {
                 blue3img.src = "img/Penguin_Toss.png";
                 blue3text.innerHTML = "Tweenese";
+            }
+            else if(blue[2]=="NBSinner") {
+                blue3img.src = "img/Heartseeker_Quinn.png";
+                blue3text.innerHTML = "NBSinner";
+            }
+            else if(blue[2]=="PanBannan") {
+                blue3img.src = "img/Spirit_Phoenix.png";
+                blue3text.innerHTML = "PanBannan";
+            }
+            else {
+                blue3img.src = "img/Blue_Super_Minion.png";
+                blue3text.innerHTML = "Niebieski Super Minion!";
+            }
+        }
+        
+        function losuj5v5() {
+            document.getElementById("team5v5").style.display = "block";
+            var xd = document.getElementsByName("5v5a");
+            var z;
+            var i;
+            var x=0;
+            var checkbox = [];
+            var red = [];
+            var blue = [];
+            for (z = 0; z < xd.length; z++){
+                if (xd[z].checked == true) {
+                checkbox[x] = xd[z].alt;
+                x++;
+                }
+            }
+            while (i!=1) {
+            var a1 = Math.floor(Math.random()*10);
+            var a2 = Math.floor(Math.random()*10);
+            var a3 = Math.floor(Math.random()*10);
+            var a4 = Math.floor(Math.random()*10);
+            var a5 = Math.floor(Math.random()*10);
+            var a6 = Math.floor(Math.random()*10);
+            var a7 = Math.floor(Math.random()*10);
+            var a8 = Math.floor(Math.random()*10);
+            var a9 = Math.floor(Math.random()*10);
+            var a10 = Math.floor(Math.random()*10);
+                if (a1!=a2 && a1!=a3 && a1!=a4 && a1!=a5 && a1!=a6 && a1!=a7 && a1!=a8 && a1!=a9 && a1!= a10){
+                    if(a2!=a3 && a2!=a4 && a2!=a5 && a2!=a6 && a2!=a7 && a2!=a8 && a2!=a9 && a2!=a10){
+                        if(a3!=a4 && a3!=a5 && a3!=a6 && a3!=a7 && a3!=a8 && a3!=a9 && a3!=a10){
+                            if(a4!=a5 && a4!=a6 && a4!=a7 && a4!=a8 && a4!=a9 && a4!=a10){
+                                if(a5!=a6 && a5!=a7 && a5!=a8 && a5!=a9 && a5!=a10){
+                                    if(a6!=a7 && a6!=a8 && a6!=a9 && a6!=a10){
+                                        if(a7!=a8 && a7!=a9 && a7!=a10){
+                                            if(a8!=a9 && a8!=a10 && a9!=a10) {
+                    i=1;
+                }
+            }}}}}}}
+            }
+            red[0] = checkbox[a1];
+            red[1] = checkbox[a2];
+            red[2] = checkbox[a3];
+            red[3] = checkbox[a4];
+            red[4] = checkbox[a5];
+            
+            blue[0] = checkbox[a6];
+            blue[1] = checkbox[a7];
+            blue[2] = checkbox[a8];
+            blue[3] = checkbox[a9];
+            blue[4] = checkbox[a10];
+            
+            var red1img = document.getElementById("red1img5");
+            var red1text = document.getElementById("red1text5");
+            
+            if(red[0]=="Longest Yeah Boy") {
+                red1img.src = "img/Multi.png";
+                red1text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(red[0]=="Shàtter Me") {
+                red1img.src = "img/Mark_of_the_Star_Guardian.png";
+                red1text.innerHTML = "Shàtter Me";
+            }
+            else if(red[0]=="marchewa1505") {
+                red1img.src = "img/2017_Worlds_Pickem_Poro.png";
+                red1text.innerHTML = "marchewa1505";
+            }
+            else if(red[0]=="Szuszel Bot") {
+                red1img.src = "img/Poro_King.png";
+                red1text.innerHTML = "Szuszel Bot";
+            }
+            else if(red[0]=="Shiroeyuuki") {
+                red1img.src = "img/PROJECT_Ashe.png";
+                red1text.innerHTML = "Shiroeyuuki";
+            }
+            else if(red[0]=="klywenc123") {
+                red1img.src = "img/Rubber_Ducky.png";
+                red1text.innerHTML = "klywenc123";
+            }
+            else if(red[0]=="Hardkorufox") {
+                red1img.src = "img/Drop_Dead.png";
+                red1text.innerHTML = "Hardkorufox";
+            }
+            else if(red[0]=="Shátter Me") {
+                red1img.src = "img/Shiro.png";
+                red1text.innerHTML = "Shátter Me";
+            }
+            else if(red[0]=="Tweenese") {
+                red1img.src = "img/Penguin_Toss.png";
+                red1text.innerHTML = "Tweenese";
+            }
+            else if(red[0]=="NBSinner") {
+                red1img.src = "img/Heartseeker_Quinn.png";
+                red1text.innerHTML = "NBSinner";
+            }
+            else if(red[0]=="PanBannan") {
+                red1img.src = "img/Spirit_Phoenix.png";
+                red1text.innerHTML = "PanBannan";
+            }
+            else {
+                red1img.src = "img/Purple_Super_Minion.png";
+                red1text.innerHTML = "Czerwony Super Minion!";
+            }
+            
+            var red2img = document.getElementById("red2img5");
+            var red2text = document.getElementById("red2text5");
+            
+            if(red[1]=="Longest Yeah Boy") {
+                red2img.src = "img/Multi.png";
+                red2text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(red[1]=="Shàtter Me") {
+                red2img.src = "img/Mark_of_the_Star_Guardian.png";
+                red2text.innerHTML = "Shàtter Me";
+            }
+            else if(red[1]=="marchewa1505") {
+                red2img.src = "img/2017_Worlds_Pickem_Poro.png";
+                red2text.innerHTML = "marchewa1505";
+            }
+            else if(red[1]=="Szuszel Bot") {
+                red2img.src = "img/Poro_King.png";
+                red2text.innerHTML = "Szuszel Bot";
+            }
+            else if(red[1]=="Shiroeyuuki") {
+                red2img.src = "img/PROJECT_Ashe.png";
+                red2text.innerHTML = "Shiroeyuuki";
+            }
+            else if(red[1]=="klywenc123") {
+                red2img.src = "img/Rubber_Ducky.png";
+                red2text.innerHTML = "klywenc123";
+            }
+            else if(red[1]=="Hardkorufox") {
+                red2img.src = "img/Drop_Dead.png";
+                red2text.innerHTML = "Hardkorufox";
+            }
+            else if(red[1]=="Shátter Me") {
+                red2img.src = "img/Shiro.png";
+                red2text.innerHTML = "Shátter Me";
+            }
+            else if(red[1]=="Tweenese") {
+                red2img.src = "img/Penguin_Toss.png";
+                red2text.innerHTML = "Tweenese";
+            }
+            else if(red[1]=="NBSinner") {
+                red2img.src = "img/Heartseeker_Quinn.png";
+                red2text.innerHTML = "NBSinner";
+            }
+            else if(red[1]=="PanBannan") {
+                red2img.src = "img/Spirit_Phoenix.png";
+                red2text.innerHTML = "PanBannan";
+            }
+            else {
+                red2img.src = "img/Purple_Super_Minion.png";
+                red2text.innerHTML = "Czerwony Super Minion!";
+            }
+            
+            
+            var red3img = document.getElementById("red3img5");
+            var red3text = document.getElementById("red3text5");
+            
+            if(red[2]=="Longest Yeah Boy") {
+                red3img.src = "img/Multi.png";
+                red3text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(red[2]=="Shàtter Me") {
+                red3img.src = "img/Mark_of_the_Star_Guardian.png";
+                red3text.innerHTML = "Shàtter Me";
+            }
+            else if(red[2]=="marchewa1505") {
+                red3img.src = "img/2017_Worlds_Pickem_Poro.png";
+                red3text.innerHTML = "marchewa1505";
+            }
+            else if(red[2]=="Szuszel Bot") {
+                red3img.src = "img/Poro_King.png";
+                red3text.innerHTML = "Szuszel Bot";
+            }
+            else if(red[2]=="Shiroeyuuki") {
+                red3img.src = "img/PROJECT_Ashe.png";
+                red3text.innerHTML = "Shiroeyuuki";
+            }
+            else if(red[2]=="klywenc123") {
+                red3img.src = "img/Rubber_Ducky.png";
+                red3text.innerHTML = "klywenc123";
+            }
+            else if(red[2]=="Hardkorufox") {
+                red3img.src = "img/Drop_Dead.png";
+                red3text.innerHTML = "Hardkorufox";
+            }
+            else if(red[2]=="Shátter Me") {
+                red3img.src = "img/Shiro.png";
+                red3text.innerHTML = "Shátter Me";
+            }
+            else if(red[2]=="Tweenese") {
+                red3img.src = "img/Penguin_Toss.png";
+                red3text.innerHTML = "Tweenese";
+            }
+            else if(red[2]=="NBSinner") {
+                red3img.src = "img/Heartseeker_Quinn.png";
+                red3text.innerHTML = "NBSinner";
+            }
+            else if(red[2]=="PanBannan") {
+                red3img.src = "img/Spirit_Phoenix.png";
+                red3text.innerHTML = "PanBannan";
+            }
+            else {
+                red3img.src = "img/Purple_Super_Minion.png";
+                red3text.innerHTML = "Czerwony Super Minion!";
+            }
+            
+            
+            var red4img = document.getElementById("red4img5");
+            var red4text = document.getElementById("red4text5");
+            
+            if(red[3]=="Longest Yeah Boy") {
+                red4img.src = "img/Multi.png";
+                red4text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(red[3]=="Shàtter Me") {
+                red4img.src = "img/Mark_of_the_Star_Guardian.png";
+                red4text.innerHTML = "Shàtter Me";
+            }
+            else if(red[3]=="marchewa1505") {
+                red4img.src = "img/2017_Worlds_Pickem_Poro.png";
+                red4text.innerHTML = "marchewa1505";
+            }
+            else if(red[3]=="Szuszel Bot") {
+                red4img.src = "img/Poro_King.png";
+                red4text.innerHTML = "Szuszel Bot";
+            }
+            else if(red[3]=="Shiroeyuuki") {
+                red4img.src = "img/PROJECT_Ashe.png";
+                red4text.innerHTML = "Shiroeyuuki";
+            }
+            else if(red[3]=="klywenc123") {
+                red4img.src = "img/Rubber_Ducky.png";
+                red4text.innerHTML = "klywenc123";
+            }
+            else if(red[3]=="Hardkorufox") {
+                red4img.src = "img/Drop_Dead.png";
+                red4text.innerHTML = "Hardkorufox";
+            }
+            else if(red[3]=="Shátter Me") {
+                red4img.src = "img/Shiro.png";
+                red4text.innerHTML = "Shátter Me";
+            }
+            else if(red[3]=="Tweenese") {
+                red4img.src = "img/Penguin_Toss.png";
+                red4text.innerHTML = "Tweenese";
+            }
+            else if(red[3]=="NBSinner") {
+                red4img.src = "img/Heartseeker_Quinn.png";
+                red4text.innerHTML = "NBSinner";
+            }
+            else if(red[3]=="PanBannan") {
+                red4img.src = "img/Spirit_Phoenix.png";
+                red4text.innerHTML = "PanBannan";
+            }
+            else {
+                red4img.src = "img/Purple_Super_Minion.png";
+                red4text.innerHTML = "Czerwony Super Minion!";
+            }
+            
+            
+            var red5img = document.getElementById("red5img5");
+            var red5text = document.getElementById("red5text5");
+            
+            if(red[4]=="Longest Yeah Boy") {
+                red5img.src = "img/Multi.png";
+                red5text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(red[4]=="Shàtter Me") {
+                red5img.src = "img/Mark_of_the_Star_Guardian.png";
+                red5text.innerHTML = "Shàtter Me";
+            }
+            else if(red[4]=="marchewa1505") {
+                red5img.src = "img/2017_Worlds_Pickem_Poro.png";
+                red5text.innerHTML = "marchewa1505";
+            }
+            else if(red[4]=="Szuszel Bot") {
+                red5img.src = "img/Poro_King.png";
+                red5text.innerHTML = "Szuszel Bot";
+            }
+            else if(red[4]=="Shiroeyuuki") {
+                red5img.src = "img/PROJECT_Ashe.png";
+                red5text.innerHTML = "Shiroeyuuki";
+            }
+            else if(red[4]=="klywenc123") {
+                red5img.src = "img/Rubber_Ducky.png";
+                red5text.innerHTML = "klywenc123";
+            }
+            else if(red[4]=="Hardkorufox") {
+                red5img.src = "img/Drop_Dead.png";
+                red5text.innerHTML = "Hardkorufox";
+            }
+            else if(red[4]=="Shátter Me") {
+                red5img.src = "img/Shiro.png";
+                red5text.innerHTML = "Shátter Me";
+            }
+            else if(red[4]=="Tweenese") {
+                red5img.src = "img/Penguin_Toss.png";
+                red5text.innerHTML = "Tweenese";
+            }
+            else if(red[4]=="NBSinner") {
+                red5img.src = "img/Heartseeker_Quinn.png";
+                red5text.innerHTML = "NBSinner";
+            }
+            else if(red[4]=="PanBannan") {
+                red5img.src = "img/Spirit_Phoenix.png";
+                red5text.innerHTML = "PanBannan";
+            }
+            else {
+                red5img.src = "img/Purple_Super_Minion.png";
+                red5text.innerHTML = "Czerwony Super Minion!";
+            }
+            
+            var blue1img = document.getElementById("blue1img5");
+            var blue1text = document.getElementById("blue1text5");
+            
+            if(blue[0]=="Longest Yeah Boy") {
+                blue1img.src = "img/Multi.png";
+                blue1text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(blue[0]=="Shàtter Me") {
+                blue1img.src = "img/Mark_of_the_Star_Guardian.png";
+                blue1text.innerHTML = "Shàtter Me";
+            }
+            else if(blue[0]=="marchewa1505") {
+                blue1img.src = "img/2017_Worlds_Pickem_Poro.png";
+                blue1text.innerHTML = "marchewa1505";
+            }
+            else if(blue[0]=="Szuszel Bot") {
+                blue1img.src = "img/Poro_King.png";
+                blue1text.innerHTML = "Szuszel Bot";
+            }
+            else if(blue[0]=="Shiroeyuuki") {
+                blue1img.src = "img/PROJECT_Ashe.png";
+                blue1text.innerHTML = "Shiroeyuuki";
+            }
+            else if(blue[0]=="klywenc123") {
+                blue1img.src = "img/Rubber_Ducky.png";
+                blue1text.innerHTML = "klywenc123";
+            }
+            else if(blue[0]=="Hardkorufox") {
+                blue1img.src = "img/Drop_Dead.png";
+                blue1text.innerHTML = "Hardkorufox";
+            }
+            else if(blue[0]=="Shátter Me") {
+                blue1img.src = "img/Shiro.png";
+                blue1text.innerHTML = "Shátter Me";
+            }
+            else if(blue[0]=="Tweenese") {
+                blue1img.src = "img/Penguin_Toss.png";
+                blue1text.innerHTML = "Tweenese";
+            }
+            else if(blue[0]=="NBSinner") {
+                blue1img.src = "img/Heartseeker_Quinn.png";
+                blue1text.innerHTML = "NBSinner";
+            }
+            else if(blue[0]=="PanBannan") {
+                blue1img.src = "img/Spirit_Phoenix.png";
+                blue1text.innerHTML = "PanBannan";
+            }
+            else {
+                blue1img.src = "img/Blue_Super_Minion.png";
+                blue1text.innerHTML = "Niebieski Super Minion!";
+            }
+            
+            var blue2img = document.getElementById("blue2img5");
+            var blue2text = document.getElementById("blue2text5");
+            
+            if(blue[1]=="Longest Yeah Boy") {
+                blue2img.src = "img/Multi.png";
+                blue2text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(blue[1]=="Shàtter Me") {
+                blue2img.src = "img/Mark_of_the_Star_Guardian.png";
+                blue2text.innerHTML = "Shàtter Me";
+            }
+            else if(blue[1]=="marchewa1505") {
+                blue2img.src = "img/2017_Worlds_Pickem_Poro.png";
+                blue2text.innerHTML = "marchewa1505";
+            }
+            else if(blue[1]=="Szuszel Bot") {
+                blue2img.src = "img/Poro_King.png";
+                blue2text.innerHTML = "Szuszel Bot";
+            }
+            else if(blue[1]=="Shiroeyuuki") {
+                blue2img.src = "img/PROJECT_Ashe.png";
+                blue2text.innerHTML = "Shiroeyuuki";
+            }
+            else if(blue[1]=="klywenc123") {
+                blue2img.src = "img/Rubber_Ducky.png";
+                blue2text.innerHTML = "klywenc123";
+            }
+            else if(blue[1]=="Hardkorufox") {
+                blue2img.src = "img/Drop_Dead.png";
+                blue2text.innerHTML = "Hardkorufox";
+            }
+            else if(blue[1]=="Shátter Me") {
+                blue2img.src = "img/Shiro.png";
+                blue2text.innerHTML = "Shátter Me";
+            }
+            else if(blue[1]=="Tweenese") {
+                blue2img.src = "img/Penguin_Toss.png";
+                blue2text.innerHTML = "Tweenese";
+            }
+            else if(blue[1]=="NBSinner") {
+                blue2img.src = "img/Heartseeker_Quinn.png";
+                blue2text.innerHTML = "NBSinner";
+            }
+            else if(blue[1]=="PanBannan") {
+                blue2img.src = "img/Spirit_Phoenix.png";
+                blue2text.innerHTML = "PanBannan";
+            }
+            else {
+                blue2img.src = "img/Blue_Super_Minion.png";
+                blue2text.innerHTML = "Niebieski Super Minion!";
+            }
+            
+            var blue3img = document.getElementById("blue3img5");
+            var blue3text = document.getElementById("blue3text5");
+            
+            if(blue[2]=="Longest Yeah Boy") {
+                blue3img.src = "img/Multi.png";
+                blue3text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(blue[2]=="Shàtter Me") {
+                blue3img.src = "img/Mark_of_the_Star_Guardian.png";
+                blue3text.innerHTML = "Shàtter Me";
+            }
+            else if(blue[2]=="marchewa1505") {
+                blue3img.src = "img/2017_Worlds_Pickem_Poro.png";
+                blue3text.innerHTML = "marchewa1505";
+            }
+            else if(blue[2]=="Szuszel Bot") {
+                blue3img.src = "img/Poro_King.png";
+                blue3text.innerHTML = "Szuszel Bot";
+            }
+            else if(blue[2]=="Shiroeyuuki") {
+                blue3img.src = "img/PROJECT_Ashe.png";
+                blue3text.innerHTML = "Shiroeyuuki";
+            }
+            else if(blue[2]=="klywenc123") {
+                blue3img.src = "img/Rubber_Ducky.png";
+                blue3text.innerHTML = "klywenc123";
+            }
+            else if(blue[2]=="Hardkorufox") {
+                blue3img.src = "img/Drop_Dead.png";
+                blue3text.innerHTML = "Hardkorufox";
+            }
+            else if(blue[2]=="Shátter Me") {
+                blue3img.src = "img/Shiro.png";
+                blue3text.innerHTML = "Shátter Me";
+            }
+            else if(blue[2]=="Tweenese") {
+                blue3img.src = "img/Penguin_Toss.png";
+                blue3text.innerHTML = "Tweenese";
+            }
+            else if(blue[2]=="NBSinner") {
+                blue3img.src = "img/Heartseeker_Quinn.png";
+                blue3text.innerHTML = "NBSinner";
+            }
+            else if(blue[2]=="PanBannan") {
+                blue3img.src = "img/Spirit_Phoenix.png";
+                blue3text.innerHTML = "PanBannan";
+            }
+            else {
+                blue3img.src = "img/Blue_Super_Minion.png";
+                blue3text.innerHTML = "Niebieski Super Minion!";
+            }
+            
+            var blue4img = document.getElementById("blue4img5");
+            var blue4text = document.getElementById("blue4text5");
+            
+            if(blue[3]=="Longest Yeah Boy") {
+                blue4img.src = "img/Multi.png";
+                blue4text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(blue[3]=="Shàtter Me") {
+                blue4img.src = "img/Mark_of_the_Star_Guardian.png";
+                blue4text.innerHTML = "Shàtter Me";
+            }
+            else if(blue[3]=="marchewa1505") {
+                blue4img.src = "img/2017_Worlds_Pickem_Poro.png";
+                blue4text.innerHTML = "marchewa1505";
+            }
+            else if(blue[3]=="Szuszel Bot") {
+                blue4img.src = "img/Poro_King.png";
+                blue4text.innerHTML = "Szuszel Bot";
+            }
+            else if(blue[3]=="Shiroeyuuki") {
+                blue4img.src = "img/PROJECT_Ashe.png";
+                blue4text.innerHTML = "Shiroeyuuki";
+            }
+            else if(blue[3]=="klywenc123") {
+                blue4img.src = "img/Rubber_Ducky.png";
+                blue4text.innerHTML = "klywenc123";
+            }
+            else if(blue[3]=="Hardkorufox") {
+                blue4img.src = "img/Drop_Dead.png";
+                blue4text.innerHTML = "Hardkorufox";
+            }
+            else if(blue[3]=="Shátter Me") {
+                blue4img.src = "img/Shiro.png";
+                blue4text.innerHTML = "Shátter Me";
+            }
+            else if(blue[3]=="Tweenese") {
+                blue4img.src = "img/Penguin_Toss.png";
+                blue4text.innerHTML = "Tweenese";
+            }
+            else if(blue[3]=="NBSinner") {
+                blue4img.src = "img/Heartseeker_Quinn.png";
+                blue4text.innerHTML = "NBSinner";
+            }
+            else if(blue[3]=="PanBannan") {
+                blue4img.src = "img/Spirit_Phoenix.png";
+                blue4text.innerHTML = "PanBannan";
+            }
+            else {
+                blue4img.src = "img/Blue_Super_Minion.png";
+                blue4text.innerHTML = "Niebieski Super Minion!";
+            }
+            
+            
+            var blue5img = document.getElementById("blue5img5");
+            var blue5text = document.getElementById("blue5text5");
+            
+            if(blue[4]=="Longest Yeah Boy") {
+                blue5img.src = "img/Multi.png";
+                blue5text.innerHTML = "Longest Yeah Boy";
+            }
+            else if(blue[4]=="Shàtter Me") {
+                blue5img.src = "img/Mark_of_the_Star_Guardian.png";
+                blue5text.innerHTML = "Shàtter Me";
+            }
+            else if(blue[4]=="marchewa1505") {
+                blue5img.src = "img/2017_Worlds_Pickem_Poro.png";
+                blue5text.innerHTML = "marchewa1505";
+            }
+            else if(blue[4]=="Szuszel Bot") {
+                blue5img.src = "img/Poro_King.png";
+                blue5text.innerHTML = "Szuszel Bot";
+            }
+            else if(blue[4]=="Shiroeyuuki") {
+                blue5img.src = "img/PROJECT_Ashe.png";
+                blue5text.innerHTML = "Shiroeyuuki";
+            }
+            else if(blue[4]=="klywenc123") {
+                blue5img.src = "img/Rubber_Ducky.png";
+                blue5text.innerHTML = "klywenc123";
+            }
+            else if(blue[4]=="Hardkorufox") {
+                blue5img.src = "img/Drop_Dead.png";
+                blue5text.innerHTML = "Hardkorufox";
+            }
+            else if(blue[4]=="Shátter Me") {
+                blue5img.src = "img/Shiro.png";
+                blue5text.innerHTML = "Shátter Me";
+            }
+            else if(blue[4]=="Tweenese") {
+                blue5img.src = "img/Penguin_Toss.png";
+                blue5text.innerHTML = "Tweenese";
+            }
+            else if(blue[4]=="NBSinner") {
+                blue5img.src = "img/Heartseeker_Quinn.png";
+                blue5text.innerHTML = "NBSinner";
+            }
+            else if(blue[4]=="PanBannan") {
+                blue5img.src = "img/Spirit_Phoenix.png";
+                blue5text.innerHTML = "PanBannan";
+            }
+            else {
+                blue5img.src = "img/Blue_Super_Minion.png";
+                blue5text.innerHTML = "Niebieski Super Minion!";
             }
         }
         
