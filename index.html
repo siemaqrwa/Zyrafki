@@ -375,7 +375,7 @@
                 </div>
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card w3-text-white" style="background-image: url(img/Armor_of_the_Fifth_Age_Taric2.jpg); background-size: cover; background-position: 60% 50%;">
+                <div class="w3-card w3-text-white" style="background-image: url(img/Armor_of_the_Fifth_Age_Taric2.jpg); background-size: cover; background-position: 60% 50%;" id="mlg">
                     <div class="w3-container">
                         <div class="iconborder">
                             <img src="img/Poro_King.png" style="width:150px; margin: auto; display: block; border-radius: 50%;" class="w3-card-4">
@@ -1890,6 +1890,37 @@
                 blue5text.innerHTML = "Niebieski Super Minion!";
             }
         }
+        
+// Konami Code
+var allowedKeys = {
+  37: 'left',
+  38: 'up',
+  39: 'right',
+  40: 'down',
+  65: 'a',
+  66: 'b'
+};
+var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+var konamiCodePosition = 0;
+document.addEventListener('keydown', function(e) {
+  var key = allowedKeys[e.keyCode];
+  var requiredKey = konamiCode[konamiCodePosition];
+  if (key == requiredKey) {
+    konamiCodePosition++;
+    if (konamiCodePosition == konamiCode.length) {
+      activateCheats();
+      konamiCodePosition = 0;
+    }
+  } else {
+    konamiCodePosition = 0;
+  }
+});
+
+function activateCheats() {
+  alert("GG, Znalazłeś easter egga!");
+  alert("PS: Sprawdź Tarica!");
+  document.getElementById("mlg").style.backgroundImage = "url(img/Armor_of_the_MLG_Taric2.jpg)"
+}
         
     </script>
 
