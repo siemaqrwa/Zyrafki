@@ -340,7 +340,6 @@
         transform: translateY(-50%);
         left: 112px;
     }
-
 </style>
 
 <body>
@@ -351,15 +350,16 @@
         <div class="overlay-content">
             <h2 id="overlay-text">Wczytywanie mapy...</h2>
             <script>
-                
-            var text = document.getElementById("overlay-text");
-            var x = Math.floor(Math.random() * 5);
+                var text = document.getElementById("overlay-text");
+                var x = Math.floor(Math.random() * 7);
 
-            if (x == 0) text.innerHTML = "NO ELOO!";
-            else if (x == 1) text.innerHTML = "Strona jest ładowana";
-            else if (x == 2) text.innerHTML = "funkcja gołInvejd() jest przetwarzania...";
-            else if (x == 3) text.innerHTML = "Poczekaj chwilę... Żyrafki już się układają do tła!";
-            else if (x == 4) text.innerHTML = "Wczytywanie mapy...";
+                if (x == 0) text.innerHTML = "NO ELOO!";
+                else if (x == 1) text.innerHTML = "Strona jest ładowana";
+                else if (x == 2) text.innerHTML = "funkcja gołInvejd() jest przetwarzania...";
+                else if (x == 3) text.innerHTML = "Poczekaj chwilę... Żyrafki już się układają do tła!";
+                else if (x == 4) text.innerHTML = "Wczytywanie mapy...";
+                else if (x == 5) text.innerHTML = "Matkę se spinguj!";
+                else if (x == 6) text.innerHTML = "Zamkniesz się czy sam mam to zrobić?";
             </script>
         </div>
     </div>
@@ -1888,7 +1888,6 @@
             alert("PS: Sprawdź Tarica!");
             document.getElementById("mlg").style.backgroundImage = "url(img/Armor_of_the_MLG_Taric2.jpg)"
         }
-
     </script>
 
 </body>
