@@ -30,7 +30,7 @@
     }
     
     .w3-card {
-        transition: all 0.5s;
+        transition: all 0.5s ease-in-out;
     }
     
     .w3-card:hover {
@@ -56,14 +56,14 @@
     }
 
     .znikacz {
-        animation: nima .5s ease;
+        animation: nima 1s ease;
     }
 
     @keyframes nima {
         0% {
             opacity: 1;
         }
-        100% {
+        50%, 100% {
             opacity: 0;
         }
     }
@@ -468,8 +468,8 @@
 
     <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
         <div class="w3-display-left w3-text-white" style="padding:48px">
-            <span class="w3-jumbo w3-hide-small w3-wide">ŻYRAFKI </span><span class="w3-xxlarge w3-hide-small" style="background: #bbb; padding: 0px 16px; font-family: 'Source Code Pro', monospace; border-radius: 16px;">1.1</span><br>
-            <span class="w3-xxlarge w3-hide-large w3-hide-medium w3-wide">ŻYRAFKI </span><span class="w3-xlarge w3-hide-large w3-hide-medium" style="background: #bbb; padding: 0px 16px; font-family: 'Source Code Pro', monospace; border-radius: 16px;">1.1</span><br>
+            <span class="w3-jumbo w3-hide-small w3-wide">ŻYRAFKI </span><span class="w3-xxlarge w3-hide-small" style="background: #bbb; padding: 0px 16px; font-family: 'Source Code Pro', monospace; border-radius: 16px;">1.0</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium w3-wide">ŻYRAFKI </span><span class="w3-xlarge w3-hide-large w3-hide-medium" style="background: #bbb; padding: 0px 16px; font-family: 'Source Code Pro', monospace; border-radius: 16px;">1.0</span><br>
             <span class="w3-large">Społeczność, napierdalanie w gry, cokolwiek</span>
         </div>
     </header>
@@ -486,7 +486,7 @@
             <div class="w3-third">
                 <i class="fas fa-heart w3-margin-bottom w3-jumbo" style="color: red"></i>
                 <p class="w3-large">Pasja</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                <p>Żyrafki to nie tryhard'y. Gramy, bo kochamy to robić!</p>
             </div>
             <div class="w3-third">
                 <i class="fas fa-gem w3-margin-bottom w3-jumbo" style="color: #79c7c9"></i>
@@ -690,12 +690,8 @@
                 </div>
             </div>
         </div>
-        <div style="margin-top:64px" class="w3-center">
-            <i class="fas fa-cog fa-10x fa-spin"></i>
-            <p class="w3-large">Prace nadal trwają...</p>
-        </div>
 
-        <div class="w3-xxlarge w3-center">LOSOWANIE DRUŻYNY</div>
+        <div class="w3-xxlarge w3-center" style="margin-top: 64px;">LOSOWANIE DRUŻYNY</div>
         <div style="margin-top:64px; box-shadow: 0px 0px 16px rgba(0,0,0,0.5);" class="w3-white">
             <div class="w3-bar w3-black" style="width: 100%;">
                 <button class="w3-bar-item v5-button w3-xxlarge w3-text-white" onclick="openTab('5v5')" style="width: 50%;">5v5</button>
@@ -1040,11 +1036,6 @@
                 </div>
             </div>
         </div>
-
-        <div style="margin-top:64px" class="w3-center">
-            <i class="fas fa-cog fa-10x fa-spin"></i>
-            <p class="w3-large">Prace TUTAJ TEŻ nadal trwają...</p>
-        </div>
     </div>
 
     <div class="w3-container w3-dark-grey" style="padding:128px 16px; clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 91%);" id="event">
@@ -1060,6 +1051,10 @@
                 <tr>
                     <td style="width: 60%;">Niszczenie nexusów na Summoner's Rift</td>
                     <td>Codziennie ok. 18:00</td>
+                </tr>
+                <tr>
+                    <td style="width: 60%;">Zabijanie bohaterów z kreskówek w Fortnite</td>
+                    <td>Po niszczeniu nexusów</td>
                 </tr>
             </table>
         </div>
@@ -1183,7 +1178,7 @@
         window.addEventListener('load', function() {
             {
                 overlay.classList.add("znikacz");
-                setTimeout('wow()', 290);
+                setTimeout('wow()', 500);
             }
         });
 
