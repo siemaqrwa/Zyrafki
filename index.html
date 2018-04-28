@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="icon" href="img/one%20giraffe.png">
+<link rel="icon" href="img/icon%20giraffe.png">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 <style>
     body,
     h1,
@@ -26,6 +27,22 @@
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
+    }
+    
+    .w3-card {
+        transition: all 0.5s;
+    }
+    
+    .w3-card:hover {
+        transform: scale(1.05);
+    }
+    
+    #about .fas {
+        transition: all 0.5s;
+    }
+    
+    #about .fas:hover {
+        transform: scale(1.2);
     }
 
     #overlay {
@@ -133,8 +150,46 @@
         position: relative;
         padding-bottom: 56.25%;
         height: 0;
-        overflow: hidden;
         max-width: 100%;
+    }
+    
+    .embed-container .fa-star {
+        padding: 8px;
+        font-size: 1em;
+        border-radius: 8px;
+        position: absolute;
+        top:0;
+        left: 100%;
+        transform: translateX(-100%) translateY(-50%);
+        z-index: 2;
+        background: #D4B02B;
+        color: #F1F1F1;
+    }
+    
+    .embed-container .fa-gem {
+        padding: 8px;
+        font-size: 1em;
+        border-radius: 8px;
+        position: absolute;
+        top:0;
+        left: 100%;
+        transform: translateX(-100%) translateY(-50%);
+        z-index: 2;
+        background: #79c7c9;
+        color: #F1F1F1;
+    }
+    
+    .embed-container .fa-heart {
+        padding: 8px;
+        font-size: 1em;
+        border-radius: 8px;
+        position: absolute;
+        top:0;
+        left: 100%;
+        transform: translateX(-100%) translateY(-50%);
+        z-index: 2;
+        background: #f10000;
+        color: #F1F1F1;
     }
 
     .embed-container iframe,
@@ -182,6 +237,10 @@
 
     tr:hover {
         background: #fff;
+    }
+    
+    .tab {
+        transition: all 1s;
     }
 
     .v5-button {
@@ -364,15 +423,15 @@
         </div>
     </div>
 
-    <div class="w3-top">
-        <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <div class="w3-top" style="z-index: 99;">
+        <div class="w3-bar w3-white w3-card-4" id="myNavbar">
             <a href="#home" class="w3-bar-item w3-button w3-wide">ŻYRAFKI</a>
             <div class="w3-right w3-hide-small w3-hide-medium">
                 <a href="#about" class="w3-bar-item w3-button">O ŻYRAFKACH</a>
                 <a href="#team" class="w3-bar-item w3-button"><i class="fas fa-users"></i> DRUŻYNA</a>
                 <a href="#event" class="w3-bar-item w3-button"><i class="far fa-calendar"></i> WYDARZENIA</a>
                 <a href="#video" class="w3-bar-item w3-button"><i class="fas fa-video"></i> FILMY</a>
-                <a href="ts3server://ts.pvp.iq.pl:9987" class="w3-bar-item w3-button"><i class="fas fa-microphone"></i> TeamSpeak3</a>
+                <a onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button"><i class="fas fa-microphone"></i> TeamSpeak3</a>
             </div>
 
 
@@ -381,8 +440,25 @@
     </a>
         </div>
     </div>
+    
+    <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-dark-grey"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright w3-hover-red w3-xlarge"><i class="far fa-times-circle"></i></span>
+        <h2>Wybierz serwer TeamSpeak3</h2>
+      </header>
+      <div class="w3-container w3-padding-large w3-center">
+                <a href="ts3server://ts.pvp.iq.pl:9987" class="w3-bar-item w3-button w3-xxlarge" onclick="document.getElementById('id01').style.display='none'" ><i class="fas fa-microphone"></i> TS.PVP.IQ.PL</a>
+                <a href="ts3server://tarajki.tk:9987" class="w3-bar-item w3-button w3-xxlarge" onclick="document.getElementById('id01').style.display='none'" ><i class="fas fa-microphone"></i> Tarajki.tk</a>
+      </div>
+      <footer class="w3-container w3-dark-grey">
+        <p>Nie zapomnij zaprosić żyrafkę do gry!</p>
+      </footer>
+    </div>
+  </div>
 
-    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-large" style="display:none" id="mySidebar">
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card-4 w3-animate-left w3-hide-large" style="display:none; z-index: 999" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16 ">ZAMKNIJ</a>
         <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">O ŻYRAFKACH</a>
         <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">DRUŻYNA</a>
@@ -392,8 +468,8 @@
 
     <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
         <div class="w3-display-left w3-text-white" style="padding:48px">
-            <span class="w3-jumbo w3-hide-small w3-wide">ŻYRAFKI</span><br>
-            <span class="w3-xxlarge w3-hide-large w3-hide-medium w3-wide">ŻYRAFKI</span><br>
+            <span class="w3-jumbo w3-hide-small w3-wide">ŻYRAFKI </span><span class="w3-xxlarge w3-hide-small" style="background: #bbb; padding: 0px 16px; font-family: 'Source Code Pro', monospace; border-radius: 16px;">1.1</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium w3-wide">ŻYRAFKI </span><span class="w3-xlarge w3-hide-large w3-hide-medium" style="background: #bbb; padding: 0px 16px; font-family: 'Source Code Pro', monospace; border-radius: 16px;">1.1</span><br>
             <span class="w3-large">Społeczność, napierdalanie w gry, cokolwiek</span>
         </div>
     </header>
@@ -428,7 +504,7 @@
                 <p><a href="#video" class="w3-button w3-black"><i class="fas fa-video"></i> Więcej filmów</a></p>
             </div>
             <div class="w3-col m8">
-                <div class='embed-container'><iframe src='https://www.youtube.com/embed/xajKTOTSPQM?rel=0&controls=0' frameborder='0'></iframe></div>
+                <div class='embed-container'><iframe src='https://www.youtube.com/embed/UwN_lrJRJtE?rel=0&controls=0' frameborder='0'></iframe></div>
             </div>
         </div>
     </div>
@@ -619,8 +695,7 @@
             <p class="w3-large">Prace nadal trwają...</p>
         </div>
 
-        <div class="w3-xxlarge w3-center">LOSOWANIE DRUŻYNY - BETA</div>
-        <p class="w3-large w3-center">Jeśli zauważyłeś buga, wyślij zrzut ekranu do Szuszla!</p>
+        <div class="w3-xxlarge w3-center">LOSOWANIE DRUŻYNY</div>
         <div style="margin-top:64px; box-shadow: 0px 0px 16px rgba(0,0,0,0.5);" class="w3-white">
             <div class="w3-bar w3-black" style="width: 100%;">
                 <button class="w3-bar-item v5-button w3-xxlarge w3-text-white" onclick="openTab('5v5')" style="width: 50%;">5v5</button>
@@ -996,6 +1071,39 @@
 
         <div class="w3-row-padding" style="margin-top:64px">
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/VOn0SMxcrw8?rel=0' frameborder='0' allowfullscreen> </iframe><i class="fas fa-heart"></i></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/adG1WQ34iKM?rel=0' frameborder='0' allowfullscreen> </iframe></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/UwN_lrJRJtE?rel=0' frameborder='0' allowfullscreen> </iframe><i class="fas fa-gem"></i></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/fWO6NcPAHI8?rel=0' frameborder='0' allowfullscreen> </iframe></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/oEca6ZsKs6Q?rel=0' frameborder='0' allowfullscreen> </iframe><i class="fas fa-star"></i></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/_qs2-_vDF9M?rel=0' frameborder='0' allowfullscreen> </iframe></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/xmYJAyF60vQ?rel=0' frameborder='0' allowfullscreen> </iframe></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/KYdzZ8KtcZA?rel=0' frameborder='0' allowfullscreen> </iframe></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/ly2DrHROVG4?rel=0' frameborder='0' allowfullscreen> </iframe></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/ievyhr3QdLk?rel=0' frameborder='0' allowfullscreen> </iframe><i class="fas fa-gem"></i></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/27rDfZz0ayY?rel=0' frameborder='0' allowfullscreen> </iframe></div>
+            </div>
+            <div class="w3-col l4 m12 s12" style="padding: 16px;">
                 <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/vcdLHW8OJcI?rel=0' frameborder='0' allowfullscreen> </iframe></div>
             </div>
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
@@ -1008,28 +1116,28 @@
                 <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/Tw8GPEDgiTA?rel=0' frameborder='0' allowfullscreen> </iframe></div>
             </div>
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
-                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/xajKTOTSPQM?rel=0' frameborder='0' allowfullscreen> </iframe></div>
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/xajKTOTSPQM?rel=0' frameborder='0' allowfullscreen> </iframe><i class="fas fa-gem"></i></div>
             </div>
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
                 <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/mcvSq_ZRp_M?rel=0' frameborder='0' allowfullscreen> </iframe></div>
             </div>
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
-                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/nJFtAao04Uc?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/nJFtAao04Uc?rel=0' frameborder='0' allowfullscreen></iframe><i class="fas fa-heart"></i></div>
             </div>
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
                 <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/R_fG69U1qpA?rel=0' frameborder='0' allowfullscreen></iframe></div>
             </div>
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
-                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/iFyWRJLCukA?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/iFyWRJLCukA?rel=0' frameborder='0' allowfullscreen></iframe><i class="fas fa-gem"></i></div>
             </div>
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
-                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/xE6cM7WzPtU?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/xE6cM7WzPtU?rel=0' frameborder='0' allowfullscreen></iframe><i class="fas fa-star"></i></div>
             </div>
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
-                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/N7xg4dZzC_s?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/N7xg4dZzC_s?rel=0' frameborder='0' allowfullscreen></iframe><i class="fas fa-gem"></i></div>
             </div>
             <div class="w3-col l4 m12 s12" style="padding: 16px;">
-                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/UUlrbSgotvY?rel=0' frameborder='0' allowfullscreen></iframe></div>
+                <div class='embed-container w3-card'><iframe src='https://www.youtube.com/embed/UUlrbSgotvY?rel=0' frameborder='0' allowfullscreen></iframe><i class="fas fa-star"></i></div>
             </div>
         </div>
     </div>
@@ -1100,7 +1208,7 @@
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
-            if (document.getElementById(tabName).style.display != "block") document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).style.display = "block";
 
 
         }
